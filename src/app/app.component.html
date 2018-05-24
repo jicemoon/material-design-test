@@ -4,9 +4,9 @@
     <app-header></app-header>
   </mat-sidenav>
   <mat-sidenav-content>
-    <button class="open-menu" mat-icon-button (click)="opened = !opened;">
-      <mat-icon>menu</mat-icon>
-    </button>
+    <a class="open-menu" [ngClass]="{ opened: opened}" (click)="opened = !opened;">
+      <mat-icon >{{opened ? 'arrow_back_ios' : 'arrow_forward_ios'}}</mat-icon>
+    </a>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
