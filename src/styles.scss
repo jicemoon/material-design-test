@@ -1,3 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
 
-body { margin: 0; }
+body {
+  margin: 0;
+}
+ul.menu-list {
+  margin: 0;
+  padding: 0;
+  li{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    a {
+      display: block;
+      text-decoration: none;
+      padding: 5px 0;
+      span{
+        padding-left: 4px;
+        border-left: 6px solid transparent;
+      }
+      &.active span{
+        border-left: 6px solid #673ab7;
+      }
+    }
+  }
+}
+
+
+.example-container {
+  padding: 20px;
+  background-color: #ece7e9;
+  >h4 {
+    border-bottom: 1px solid #dadada;
+    padding: 12px 0;
+    margin: 0;
+    font-size: 16px;
+  }
+  >div {
+    margin: 0;
+    padding: 15px 30px;
+    background-color: rgba(253, 245, 255, 1);
+  }
+  &:nth-of-type(2n) {
+    background-color: #fff3f7;
+  }
+}

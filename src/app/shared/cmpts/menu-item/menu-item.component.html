@@ -1,0 +1,12 @@
+<mat-expansion-panel [(expanded)]="menuItem.isOpen">
+  <mat-expansion-panel-header>
+    <mat-panel-title>{{ menuItem.label }}</mat-panel-title>
+  </mat-expansion-panel-header>
+  <ul class="menu-list">
+    <li *ngFor="let item of menuItem.children">
+      <a [routerLink]="item.link" routerLinkActive="active">
+        <span>{{ item.label }}</span>
+      </a>
+    </li>
+  </ul>
+</mat-expansion-panel>

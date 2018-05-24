@@ -1,12 +1,12 @@
 
-<button class="open-menu" mat-icon-button *ngIf="!opened" (click)="opened = true;">
-  <mat-icon>menu</mat-icon>
-</button>
 <mat-sidenav-container>
-  <mat-sidenav mode="push" [(opened)]="opened">
+  <mat-sidenav mode="side" [(opened)]="opened">
     <app-header></app-header>
   </mat-sidenav>
   <mat-sidenav-content>
+    <button class="open-menu" mat-icon-button (click)="opened = !opened;">
+      <mat-icon>menu</mat-icon>
+    </button>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './shared/cmpts/header/header.component';
 
-import { MatMenuModule, MatSidenavModule, MatButtonModule } from '@angular/material';
+import { MatMenuModule, MatSidenavModule, MatButtonModule, MatExpansionModule } from '@angular/material';
 import { MatIconModule } from '@angular/material/icon';
+import { MenuItemComponent } from './shared/cmpts/menu-item/menu-item.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    MenuItemComponent
   ],
   imports: [
     BrowserModule,
@@ -20,6 +22,7 @@ import { MatIconModule } from '@angular/material/icon';
     BrowserAnimationsModule,
     MatMenuModule,
     MatSidenavModule,
+    MatExpansionModule,
     MatIconModule,
     MatButtonModule
   ],

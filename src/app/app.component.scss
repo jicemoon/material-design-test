@@ -1,9 +1,15 @@
-.open-menu {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 10000;
+mat-sidenav-container{
+  min-height: 100vh;
 }
-mat-sidenav, mat-sidenav-content{
+mat-sidenav {
+  min-width: 280px;
+}
+mat-sidenav-content{
   padding: 30px 20px;
+}
+.open-menu {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: 10000;
 }
