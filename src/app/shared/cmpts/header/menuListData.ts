@@ -12,7 +12,11 @@ const FormControls: MenuItem = {
     {
       label: 'AutoComplete',
       link: '/formControls/autocomplete'
-    }
+    },
+    {
+      label: 'Checkbox',
+      link: '/formControls/checkbox'
+    },
   ]
 };
 const MenuListData: MenuItem[] = [

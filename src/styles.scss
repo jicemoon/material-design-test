@@ -14,18 +14,32 @@ ul.menu-list {
       display: block;
       text-decoration: none;
       padding: 5px 0;
+      color: rgba(0, 0, 0, 0.6);
       span{
         padding-left: 4px;
         border-left: 6px solid transparent;
       }
-      &.active span{
-        border-left: 6px solid #673ab7;
+      &.active{
+        color: #673ab7;
+        span{
+          border-left: 6px solid #673ab7;
+        }
       }
     }
   }
 }
 
 
+.example-section {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.example-margin {
+  margin: 0 10px;
+}
 .example-container {
   padding: 20px;
   background-color: #ece7e9;

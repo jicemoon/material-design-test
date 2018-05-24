@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { FormControlsComponent } from './form-controls.component';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
       {
         path: 'autocomplete',
         component: AutocompleteComponent
+      },
+      {
+        path: 'checkbox',
+        component: CheckboxComponent
       }
     ]
   },
