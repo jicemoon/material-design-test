@@ -6,6 +6,7 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import { InputComponent } from '../form-controls/input/input.component';
 import { RadioButtonComponent } from './radio-button/radio-button.component';
+import { SelectComponent } from './select/select.component';
 
 const routes: Routes = [
   {
@@ -36,6 +37,10 @@ const routes: Routes = [
       {
         path: 'radioButton',
         component: RadioButtonComponent
+      },
+      {
+        path: 'select',
+        component: SelectComponent
       },
     ]
   },

@@ -29,6 +29,10 @@ const FormControls: MenuItem = {
       label: 'Radio Button',
       link: '/formControls/radioButton'
     },
+    {
+      label: 'Select',
+      link: '/formControls/select'
+    },
   ]
 };
 const MenuListData: MenuItem[] = [
