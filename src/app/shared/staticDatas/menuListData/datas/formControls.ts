@@ -1,10 +1,6 @@
-interface MenuItem {
-  label: string;
-  link: string;
-  isOpen?: boolean;
-  children?: MenuItem[];
-}
-const FormControls: MenuItem = {
+import { MenuItem } from './../MenuItem.model';
+
+export const FormControls: MenuItem = {
   label: 'Form Controls',
   link: '/formControls',
   isOpen: true,
@@ -41,9 +37,5 @@ const FormControls: MenuItem = {
       label: 'Slide Toggle',
       link: '/formControls/slideToggle'
     },
-  ]
+  ],
 };
-const MenuListData: MenuItem[] = [
-  FormControls
-];
-export { MenuItem, MenuListData };

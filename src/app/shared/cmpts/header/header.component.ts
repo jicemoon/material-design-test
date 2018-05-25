@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuItem, MenuListData } from './menuListData';
+import { MenuItem, MenuListData } from './../../staticDatas/menuListData';
 
 @Component({
   selector: 'app-header',
