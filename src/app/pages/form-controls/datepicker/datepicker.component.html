@@ -1,0 +1,139 @@
+<div class="example-container">
+  <h4>Basic datepicker</h4>
+  <div>
+    <mat-form-field>
+      <input matInput [matDatepicker]="pickerBasic" placeholder="请选择日期">
+      <mat-datepicker-toggle matSuffix [for]="pickerBasic"></mat-datepicker-toggle>
+      <mat-datepicker #pickerBasic></mat-datepicker>
+    </mat-form-field>
+  </div>
+</div>
+<div class="example-container">
+  <h4>Datepicker start date</h4>
+  <div>
+    <mat-form-field>
+      <input matInput [matDatepicker]="pickerStartDate" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="pickerStartDate"></mat-datepicker-toggle>
+      <mat-datepicker #pickerStartDate startView="year" [startAt]="startDate"></mat-datepicker>
+    </mat-form-field>
+  </div>
+</div>
+<div class="example-container">
+  <h4>Datepicker selected value</h4>
+  <div>
+    <mat-form-field>
+      <input matInput [matDatepicker]="pickerSelected1" placeholder="Angular forms" [formControl]="dateFC">
+      <mat-datepicker-toggle matSuffix [for]="pickerSelected1"></mat-datepicker-toggle>
+      <mat-datepicker #pickerSelected1></mat-datepicker>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput [matDatepicker]="pickerSelected2" placeholder="Angular forms (w/ deserialization)"
+            [formControl]="serializedDateFC">
+      <mat-datepicker-toggle matSuffix [for]="pickerSelected2"></mat-datepicker-toggle>
+      <mat-datepicker #pickerSelected2></mat-datepicker>
+    </mat-form-field>
+    <br>
+    <mat-form-field>
+      <input matInput [matDatepicker]="pickerSelected3" placeholder="Value binding" [value]="dateFC.value">
+      <mat-datepicker-toggle matSuffix [for]="pickerSelected3"></mat-datepicker-toggle>
+      <mat-datepicker #pickerSelected3></mat-datepicker>
+    </mat-form-field>
+  </div>
+</div>
+<div class="example-container">
+  <h4>Datepicker with min & max validation</h4>
+  <div>
+    <mat-form-field class="example-full-width">
+      <input matInput [min]="minDate" [max]="maxDate" [matDatepicker]="pickerMaxMin" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="pickerMaxMin"></mat-datepicker-toggle>
+      <mat-datepicker #pickerMaxMin></mat-datepicker>
+    </mat-form-field>
+  </div>
+</div>
+<div class="example-container">
+  <h4>Datepicker with filter validation</h4>
+  <div>
+    <mat-form-field class="example-full-width">
+      <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="pickerFilter" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="pickerFilter"></mat-datepicker-toggle>
+      <mat-datepicker #pickerFilter></mat-datepicker>
+    </mat-form-field>
+  </div>
+</div>
+<div class="example-container">
+  <h4>Datepicker input and change events</h4>
+  <div>
+    <mat-form-field>
+      <input matInput [matDatepicker]="pickerChangeHandle" placeholder="Input & change events"
+            (dateInput)="addEvent('input', $event)" (dateChange)="addEvent('change', $event)">
+      <mat-datepicker-toggle matSuffix [for]="pickerChangeHandle"></mat-datepicker-toggle>
+      <mat-datepicker #pickerChangeHandle></mat-datepicker>
+    </mat-form-field>
+
+    <ul class="example-events">
+      <li *ngFor="let e of eventsStr">{{e}}</li>
+    </ul>
+  </div>
+</div>
+<div class="example-container">
+  <h4>Disabled datepicker</h4>
+  <div>
+    <p>
+      <mat-form-field>
+        <input matInput [matDatepicker]="pickerDisabled1" placeholder="Completely disabled" disabled>
+        <mat-datepicker-toggle matSuffix [for]="pickerDisabled1"></mat-datepicker-toggle>
+        <mat-datepicker #pickerDisabled1></mat-datepicker>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field>
+        <input matInput [matDatepicker]="pickerDisabled2" placeholder="Popup disabled">
+        <mat-datepicker-toggle matSuffix [for]="pickerDisabled2" disabled></mat-datepicker-toggle>
+        <mat-datepicker #pickerDisabled2></mat-datepicker>
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field>
+        <input matInput [matDatepicker]="pickerDisabled3" placeholder="Input disabled" disabled>
+        <mat-datepicker-toggle matSuffix [for]="pickerDisabled3"></mat-datepicker-toggle>
+        <mat-datepicker #pickerDisabled3 disabled="false"></mat-datepicker>
+      </mat-form-field>
+    </p>
+  </div>
+</div>
+<div class="example-container">
+  <h4>Datepicker touch UI</h4>
+  <div>
+    <mat-form-field class="example-full-width">
+      <input matInput [matDatepicker]="pickerTouch" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="pickerTouch"></mat-datepicker-toggle>
+      <mat-datepicker touchUi="true" #pickerTouch></mat-datepicker>
+    </mat-form-field>
+  </div>
+</div>
+<div class="example-container">
+  <h4>Datepicker open method</h4>
+  <div>
+    <mat-form-field class="example-full-width">
+      <input matInput [matDatepicker]="pickerOpenMethod" placeholder="Choose a date">
+      <mat-datepicker #pickerOpenMethod></mat-datepicker>
+    </mat-form-field>
+    <button mat-raised-button (click)="pickerOpenMethod.open()">Open</button>
+  </div>
+</div>
+<div class="example-container">
+  <h4>Datepicker with different locale</h4>
+  <div>
+    <mat-form-field>
+      <input matInput [matDatepicker]="pickerLocal" placeholder="Different locale">
+      <mat-datepicker-toggle matSuffix [for]="pickerLocal"></mat-datepicker-toggle>
+      <mat-datepicker #pickerLocal></mat-datepicker>
+    </mat-form-field>
+
+    <button mat-button (click)="switchFrenchOrChinese()">{{ isCheinese() ? 'Switch to English' : '切换成中文'}}</button>
+  </div>
+</div>
+

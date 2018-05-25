@@ -17,6 +17,14 @@ const FormControls: MenuItem = {
       label: 'Checkbox',
       link: '/formControls/checkbox'
     },
+    {
+      label: 'Datepicker',
+      link: '/formControls/datepicker'
+    },
+    {
+      label: 'Input',
+      link: '/formControls/input'
+    },
   ]
 };
 const MenuListData: MenuItem[] = [

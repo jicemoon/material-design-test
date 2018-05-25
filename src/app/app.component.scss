@@ -1,11 +1,12 @@
 mat-sidenav-container{
-  min-height: 100vh;
+  height: 100vh;
 }
 mat-sidenav {
   min-width: 280px;
 }
 mat-sidenav-content{
-  padding: 30px 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .open-menu {
   position: absolute;
@@ -14,12 +15,12 @@ mat-sidenav-content{
   cursor: pointer;
   border-radius: 0 50% 50% 0;
   color: rgba(0, 0, 0, 0.5);
-  background-color: rgba(153, 72, 206, 0.2);
+  background-color: rgba(153, 72, 206, 0.3);
+  transition: all 200ms;
   &:hover{
     color: #673ab7;
   }
   &.opened{
-    background-color: rgba(128, 146, 146, 0.2);
-    ///transform: translateX(-100%);
+    background-color: rgba(128, 146, 146, 0.3);
   }
 }

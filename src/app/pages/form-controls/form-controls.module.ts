@@ -7,13 +7,19 @@ import {
   MatSlideToggleModule,
   MatInputModule,
   MatRadioModule,
-  MatCheckboxModule
+  MatCheckboxModule,
+  MatNativeDateModule,
+  MatDatepickerModule,
+  MatIconModule,
+  MatButtonModule,
 } from '@angular/material';
 
 import { FormControlsRoutingModule } from './form-controls-routing.module';
 import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { FormControlsComponent } from './form-controls.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
+import { DatepickerComponent } from './datepicker/datepicker.component';
+import { InputComponent } from './input/input.component';
 
 @NgModule({
   imports: [
@@ -24,10 +30,14 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
     MatAutocompleteModule,
     MatInputModule,
     MatSlideToggleModule,
-    FormControlsRoutingModule,
     MatCheckboxModule,
-    MatRadioModule
+    MatRadioModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
+    MatIconModule,
+    MatButtonModule,
+    FormControlsRoutingModule
   ],
-  declarations: [AutocompleteComponent, FormControlsComponent, CheckboxComponent]
+  declarations: [ AutocompleteComponent, FormControlsComponent, CheckboxComponent, DatepickerComponent, InputComponent ]
 })
 export class FormControlsModule {}
