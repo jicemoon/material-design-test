@@ -33,6 +33,14 @@ const FormControls: MenuItem = {
       label: 'Select',
       link: '/formControls/select'
     },
+    {
+      label: 'Slider',
+      link: '/formControls/slider'
+    },
+    {
+      label: 'Slide Toggle',
+      link: '/formControls/slideToggle'
+    },
   ]
 };
 const MenuListData: MenuItem[] = [

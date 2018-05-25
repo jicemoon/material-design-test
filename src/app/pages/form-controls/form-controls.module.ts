@@ -12,7 +12,8 @@ import {
   MatDatepickerModule,
   MatIconModule,
   MatButtonModule,
-  MatSelectModule
+  MatSelectModule,
+  MatSliderModule,
 } from '@angular/material';
 
 import { FormControlsRoutingModule } from './form-controls-routing.module';
@@ -23,6 +24,8 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
 import { InputComponent } from './input/input.component';
 import { RadioButtonComponent } from './radio-button/radio-button.component';
 import { SelectComponent } from './select/select.component';
+import { SliderComponent } from './slider/slider.component';
+import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
 
 @NgModule({
   imports: [
@@ -40,6 +43,7 @@ import { SelectComponent } from './select/select.component';
     MatIconModule,
     MatButtonModule,
     MatSelectModule,
+    MatSliderModule,
     FormControlsRoutingModule
   ],
   declarations: [
@@ -49,7 +53,9 @@ import { SelectComponent } from './select/select.component';
     DatepickerComponent,
     InputComponent,
     RadioButtonComponent,
-    SelectComponent
+    SelectComponent,
+    SliderComponent,
+    SlideToggleComponent
   ]
 })
 export class FormControlsModule {}

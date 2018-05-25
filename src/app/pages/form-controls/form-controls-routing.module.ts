@@ -7,6 +7,8 @@ import { DatepickerComponent } from './datepicker/datepicker.component';
 import { InputComponent } from '../form-controls/input/input.component';
 import { RadioButtonComponent } from './radio-button/radio-button.component';
 import { SelectComponent } from './select/select.component';
+import { SliderComponent } from './slider/slider.component';
+import { SlideToggleComponent } from './slide-toggle/slide-toggle.component';
 
 const routes: Routes = [
   {
@@ -41,6 +43,14 @@ const routes: Routes = [
       {
         path: 'select',
         component: SelectComponent
+      },
+      {
+        path: 'slider',
+        component: SliderComponent
+      },
+      {
+        path: 'slideToggle',
+        component: SlideToggleComponent
       },
     ]
   },
