@@ -20,6 +20,7 @@ import { FormControlsComponent } from './form-controls.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import { InputComponent } from './input/input.component';
+import { RadioButtonComponent } from './radio-button/radio-button.component';
 
 @NgModule({
   imports: [
@@ -38,6 +39,6 @@ import { InputComponent } from './input/input.component';
     MatButtonModule,
     FormControlsRoutingModule
   ],
-  declarations: [ AutocompleteComponent, FormControlsComponent, CheckboxComponent, DatepickerComponent, InputComponent ]
+  declarations: [ AutocompleteComponent, FormControlsComponent, CheckboxComponent, DatepickerComponent, InputComponent, RadioButtonComponent ]
 })
 export class FormControlsModule {}

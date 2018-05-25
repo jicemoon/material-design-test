@@ -5,6 +5,7 @@ import { AutocompleteComponent } from './autocomplete/autocomplete.component';
 import { CheckboxComponent } from './checkbox/checkbox.component';
 import { DatepickerComponent } from './datepicker/datepicker.component';
 import { InputComponent } from '../form-controls/input/input.component';
+import { RadioButtonComponent } from './radio-button/radio-button.component';
 
 const routes: Routes = [
   {
@@ -31,6 +32,10 @@ const routes: Routes = [
       {
         path: 'input',
         component: InputComponent
+      },
+      {
+        path: 'radioButton',
+        component: RadioButtonComponent
       },
     ]
   },
