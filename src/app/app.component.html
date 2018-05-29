@@ -1,13 +1,14 @@
 
 <mat-sidenav-container>
-  <mat-sidenav mode="side" [(opened)]="opened">
+  <mat-sidenav mode="push" [(opened)]="opened">
     <app-header></app-header>
   </mat-sidenav>
   <mat-sidenav-content>
-    <a class="open-menu" [ngClass]="{ opened: opened}" (click)="opened = !opened;">
-      <mat-icon >{{opened ? 'arrow_back_ios' : 'arrow_forward_ios'}}</mat-icon>
-    </a>
+    <app-breadcrumb></app-breadcrumb>
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
+<a [@fadeTransAnimation] class="open-menu" *ngIf="!opened" (click)="opened = !opened;">
+  <mat-icon >{{opened ? 'arrow_back_ios' : 'arrow_forward_ios'}}</mat-icon>
+</a>
 

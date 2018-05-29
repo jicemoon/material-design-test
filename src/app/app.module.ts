@@ -8,12 +8,14 @@ import { HeaderComponent } from './shared/cmpts/header/header.component';
 
 import { MatMenuModule, MatSidenavModule, MatButtonModule, MatExpansionModule, MatIconModule } from '@angular/material';
 import { MenuItemComponent } from './shared/cmpts/menu-item/menu-item.component';
+import { BreadcrumbComponent } from './shared/cmpts/breadcrumb/breadcrumb.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    MenuItemComponent
+    MenuItemComponent,
+    BreadcrumbComponent
   ],
   imports: [
     BrowserModule,

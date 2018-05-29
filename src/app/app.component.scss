@@ -8,10 +8,13 @@ mat-sidenav-content{
   overflow-y: auto;
   overflow-x: hidden;
 }
+app-breadcrumb{ display: block; margin-bottom: 10px;}
 .open-menu {
-  position: absolute;
-  top: 0px;
+  position: fixed;
+  top: 50%;
   left: 0px;
+  display: inline-block;
+  z-index: 5;
   cursor: pointer;
   border-radius: 0 50% 50% 0;
   color: rgba(0, 0, 0, 0.5);
@@ -19,8 +22,5 @@ mat-sidenav-content{
   transition: all 200ms;
   &:hover{
     color: #673ab7;
-  }
-  &.opened{
-    background-color: rgba(128, 146, 146, 0.3);
   }
 }

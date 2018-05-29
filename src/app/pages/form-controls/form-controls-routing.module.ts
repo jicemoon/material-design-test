@@ -14,43 +14,73 @@ const routes: Routes = [
   {
     path: '',
     component: FormControlsComponent,
+    data: {
+      breadcrumb: 'Form Controls'
+    },
     children: [
       {
         path: '',
         redirectTo: 'autocomplete',
-        pathMatch: 'full'
+        pathMatch: 'full',
+        data: {
+          breadcrumb: 'Autocomplete'
+        },
       },
       {
         path: 'autocomplete',
-        component: AutocompleteComponent
+        component: AutocompleteComponent,
+        data: {
+          breadcrumb: 'Autocomplete'
+        },
       },
       {
         path: 'checkbox',
-        component: CheckboxComponent
+        component: CheckboxComponent,
+        data: {
+          breadcrumb: 'Checkbox'
+        },
       },
       {
         path: 'datepicker',
-        component: DatepickerComponent
+        component: DatepickerComponent,
+        data: {
+          breadcrumb: 'Datepicker'
+        },
       },
       {
         path: 'input',
-        component: InputComponent
+        component: InputComponent,
+        data: {
+          breadcrumb: 'Input'
+        },
       },
       {
         path: 'radioButton',
-        component: RadioButtonComponent
+        component: RadioButtonComponent,
+        data: {
+          breadcrumb: 'Radio Button'
+        },
       },
       {
         path: 'select',
-        component: SelectComponent
+        component: SelectComponent,
+        data: {
+          breadcrumb: 'Select'
+        },
       },
       {
         path: 'slider',
-        component: SliderComponent
+        component: SliderComponent,
+        data: {
+          breadcrumb: 'Slider'
+        },
       },
       {
         path: 'slideToggle',
-        component: SlideToggleComponent
+        component: SlideToggleComponent,
+        data: {
+          breadcrumb: 'Slide Toggle'
+        },
       },
     ]
   },
