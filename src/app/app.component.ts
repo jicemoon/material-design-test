@@ -10,5 +10,5 @@ import { getFadeTransAnimaiton } from './shared/animations';
   ]
 })
 export class AppComponent {
-  opened = true;
+  opened = false;
 }

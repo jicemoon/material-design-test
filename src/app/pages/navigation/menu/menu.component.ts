@@ -11,5 +11,7 @@ export class MenuComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  openOrClosedHandle(evt) {
+    console.log(evt);
+  }
 }
