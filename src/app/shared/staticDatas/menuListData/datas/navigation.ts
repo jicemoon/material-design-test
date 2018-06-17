@@ -8,6 +8,10 @@ export const navigation: MenuItem = {
     {
       label: 'Menu',
       link: '/navigation/menu'
-    }
+    },
+    {
+      label: 'Sidenav',
+      link: '/navigation/sidenav'
+    },
   ]
 };

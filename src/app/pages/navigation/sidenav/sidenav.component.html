@@ -1,0 +1,71 @@
+<div class="example-container">
+  <h4>Basic sidenav</h4>
+  <div>
+    <mat-sidenav-container class="example-container">
+      <mat-sidenav mode="side" opened>Sidenav content</mat-sidenav>
+      <mat-sidenav-content>Main content</mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+</div>
+<div class="example-container">
+  <h4>Basic Drawer</h4>
+  <div>
+    <mat-drawer-container class="example-container">
+      <mat-drawer mode="side" opened="true">Drawer content</mat-drawer>
+      <mat-drawer-content>Main content</mat-drawer-content>
+    </mat-drawer-container>
+  </div>
+</div>
+<div class="example-container">
+  <h4>Implicit main content with two sidenavs</h4>
+  <div>
+    <mat-sidenav-container class="example-container">
+      <mat-sidenav opened mode="side">Start content</mat-sidenav>
+      <mat-sidenav opened mode="side" position="end">End content</mat-sidenav>
+      Implicit main content
+    </mat-sidenav-container>
+  </div>
+</div>
+<div class="example-container">
+  <h4>Sidenav open & close behavior</h4>
+  <div>
+    <mat-sidenav-container class="example-container">
+      <mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')">
+        Sidenav content
+      </mat-sidenav>
+
+      <mat-sidenav-content>
+        <p>
+          <mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox>
+        </p>
+        <p>
+          <button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button>
+        </p>
+        <p>Events:</p>
+        <div class="example-events">
+          <div *ngFor="let e of events">{{e}}</div>
+        </div>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+  </div>
+</div>
+<div class="example-container">
+  <h4></h4>
+  <div></div>
+</div>
+<div class="example-container">
+  <h4></h4>
+  <div></div>
+</div>
+<div class="example-container">
+  <h4></h4>
+  <div></div>
+</div>
+<div class="example-container">
+  <h4></h4>
+  <div></div>
+</div>
+<div class="example-container">
+  <h4></h4>
+  <div></div>
+</div>
