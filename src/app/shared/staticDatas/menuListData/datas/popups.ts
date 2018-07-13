@@ -9,6 +9,10 @@ export const popups: MenuItem = {
     {
       label: 'Bottom Sheet',
       link: '/popups/bottomSheet'
-    }
+    },
+    {
+      label: 'Dialog',
+      link: '/popups/dialog'
+    },
   ]
 };

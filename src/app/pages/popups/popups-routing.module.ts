@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { PopupsComponent } from './popups.component';
 import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
+import { DialogComponent } from './dialog/dialog.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
       {
         path: 'bottomSheet',
         component: BottomSheetComponent
+      },
+      {
+        path: 'dialog',
+        component: DialogComponent
       }
     ]
   }
