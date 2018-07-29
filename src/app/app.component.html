@@ -1,7 +1,9 @@
 
 <mat-sidenav-container>
-  <mat-sidenav mode="push" [(opened)]="opened">
-    <app-header></app-header>
+  <mat-sidenav mode="push" [(opened)]="opened" (click)="navClickHandle($event)">
+    <div>
+      <app-header></app-header>
+    </div>
   </mat-sidenav>
   <mat-sidenav-content>
     <app-breadcrumb></app-breadcrumb>

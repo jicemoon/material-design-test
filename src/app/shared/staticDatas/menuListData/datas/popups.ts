@@ -14,5 +14,9 @@ export const popups: MenuItem = {
       label: 'Dialog',
       link: '/popups/dialog'
     },
+    {
+      label: 'Snack Bar',
+      link: '/popups/snackBar'
+    },
   ]
 };

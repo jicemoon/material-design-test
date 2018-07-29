@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { PopupsComponent } from './popups.component';
 import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
 import { DialogComponent } from './dialog/dialog.component';
+import { SnackBarComponent } from './snack-bar/snack-bar.component';
 
 const routes: Routes = [
   {
@@ -21,7 +22,11 @@ const routes: Routes = [
       {
         path: 'dialog',
         component: DialogComponent
-      }
+      },
+      {
+        path: 'snackBar',
+        component: SnackBarComponent
+      },
     ]
   }
 ];

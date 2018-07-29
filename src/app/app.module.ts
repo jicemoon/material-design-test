@@ -30,4 +30,5 @@ import { BreadcrumbComponent } from './shared/cmpts/breadcrumb/breadcrumb.compon
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
