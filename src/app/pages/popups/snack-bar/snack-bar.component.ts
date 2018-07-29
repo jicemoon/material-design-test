@@ -13,6 +13,8 @@ export class SnackBarComponent {
   openSnackBar(message: string, action: string) {
     this.snackBar.open(message, action, {
       duration: 2000,
+      horizontalPosition: 'center',
+      verticalPosition: 'top'
     });
   }
 }

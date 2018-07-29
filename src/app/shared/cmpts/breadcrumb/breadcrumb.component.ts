@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd, Params, PRIMARY_OUTLET } from '@angular/router';
 import { filter } from 'rxjs/operators';
+import { Title } from '@angular/platform-browser';
 
 interface IBreadcrumb {
   label: string;
@@ -17,7 +18,7 @@ export const ROUTE_DATA_BREADCRUMB = 'breadcrumb';
 export class BreadcrumbComponent implements OnInit {
   public breadcrumbs: IBreadcrumb[];
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router) {
+  constructor(private activatedRoute: ActivatedRoute, private router: Router, private titleService: Title) {
     this.breadcrumbs = [];
   }
 
@@ -27,6 +28,7 @@ export class BreadcrumbComponent implements OnInit {
       // set breadcrumbs
       const root: ActivatedRoute = this.activatedRoute.root;
       this.breadcrumbs = this.getBreadcrumbs(root);
+      this.titleService.setTitle(this.breadcrumbs[this.breadcrumbs.length - 1].label);
     });
   }
 

@@ -18,5 +18,9 @@ export const popups: MenuItem = {
       label: 'Snack Bar',
       link: '/popups/snackBar'
     },
+    {
+      label: 'Tooltip',
+      link: '/popups/tooltip'
+    },
   ]
 };

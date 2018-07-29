@@ -4,11 +4,15 @@ import { PopupsComponent } from './popups.component';
 import { BottomSheetComponent } from './bottom-sheet/bottom-sheet.component';
 import { DialogComponent } from './dialog/dialog.component';
 import { SnackBarComponent } from './snack-bar/snack-bar.component';
+import { TooltipComponent } from './tooltip/tooltip.component';
 
 const routes: Routes = [
   {
     path: '',
     component: PopupsComponent,
+    data: {
+      breadcrumb: 'Popups'
+    },
     children: [
       {
         path: '',
@@ -17,15 +21,31 @@ const routes: Routes = [
       },
       {
         path: 'bottomSheet',
-        component: BottomSheetComponent
+        component: BottomSheetComponent,
+        data: {
+          breadcrumb: 'Bottom Sheet'
+        },
       },
       {
         path: 'dialog',
-        component: DialogComponent
+        component: DialogComponent,
+        data: {
+          breadcrumb: 'Dialog'
+        },
       },
       {
         path: 'snackBar',
-        component: SnackBarComponent
+        component: SnackBarComponent,
+        data: {
+          breadcrumb: 'Snack Bar'
+        },
+      },
+      {
+        path: 'tooltip',
+        component: TooltipComponent,
+        data: {
+          breadcrumb: 'Tooltip'
+        },
       },
     ]
   }
