@@ -1,0 +1,166 @@
+<div class="example-container">
+  <h4>Basic tooltip</h4>
+  <div>
+    <button
+      mat-raised-button
+      matTooltip="Info about the action"
+      aria-label="Button that displays a tooltip when focused or hovered over">
+      Action
+    </button>
+  </div>
+</div>
+<div class="example-container">
+  <h4>Tooltip with a custom position</h4>
+  <div>
+    <mat-form-field class="example-user-input">
+      <mat-select placeholder="Tooltip position" [formControl]="position">
+        <mat-option *ngFor="let positionOption of positionOptions" [value]="positionOption">
+          {{positionOption}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button
+      mat-raised-button
+      matTooltip="Info about the action"
+      [matTooltipPosition]="position.value"
+      aria-label="Button that displays a tooltip in various positions">
+      Action
+    </button>
+  </div>
+</div>
+<div class="example-container">
+  <h4>Tooltip that can have a custom class applied.</h4>
+  <div>
+    <button mat-raised-button
+        matTooltip="Info about the action"
+        matTooltipClass="example-tooltip-red"
+        aria-label="Button that shows a red tooltip"
+        class="example-button">
+      Red-tooltip Action
+    </button>
+  </div>
+</div>
+<div class="example-container">
+  <h4>Tooltip with a show and hide delay</h4>
+  <div>
+    <mat-form-field class="example-user-input">
+      <input matInput placeholder="Show delay (milliseconds)"
+          type="number"
+          aria-label="Adds a delay between hovering over the button and displaying the tooltip"
+          [formControl]="showDelay">
+    </mat-form-field>
+
+    <mat-form-field class="example-user-input">
+      <input matInput placeholder="Hide delay (milliseconds)"
+          type="number"
+          aria-label="Adds a delay between hovering away from the button and hiding the tooltip"
+          [formControl]="hideDelay">
+    </mat-form-field>
+
+    <button mat-raised-button
+          matTooltip="Info about the action"
+          [matTooltipShowDelay]="showDelay.value"
+          [matTooltipHideDelay]="hideDelay.value"
+          aria-label="Button that displays a tooltip with a customized delay in showing and hiding">
+      Action
+    </button>
+  </div>
+</div>
+<div class="example-container">
+  <h4>Tooltip that can be disabled</h4>
+  <div>
+    <button mat-raised-button
+        matTooltip="Info about the action"
+        [matTooltipDisabled]="disabled.value"
+        aria-label="Button that displays a tooltip that can be programatically disabled">
+      Action
+    </button>
+
+    <mat-checkbox [formControl]="disabled" class="example-disabled-checkbox">
+      Tooltip disabled
+    </mat-checkbox>
+  </div>
+</div>
+<div class="example-container">
+  <h4>Tooltip that can be manually shown/hidden</h4>
+  <div>
+    <div>
+      <span> Mouse over to </span>
+      <button mat-button
+          (mouseenter)="tooltip.show()"
+          aria-label="Button that progamatically shows a tooltip on another button"
+          class="example-action-button">
+        show
+      </button>
+      <button mat-button
+          (mouseenter)="tooltip.hide()"
+          aria-label="Button that progamatically hides a tooltip on another button"
+          class="example-action-button">
+        hide
+      </button>
+      <button mat-button
+          (mouseenter)="tooltip.toggle()"
+          aria-label="Button that progamatically toggles a tooltip on another button to show/hide"
+          class="example-action-button">
+        toggle show/hide
+      </button>
+    </div>
+
+    <button mat-raised-button #tooltip="matTooltip"
+        matTooltip="Info about the action"
+        matTooltipPosition="right"
+        aria-tooltip="Button that displays and hides a tooltip triggered by other buttons">
+      Action
+    </button>
+  </div>
+</div>
+<div class="example-container">
+  <h4>Tooltip with a changing message</h4>
+  <div>
+    <mat-form-field class="example-user-input">
+      <input matInput placeholder="Tooltip message" [formControl]="message">
+    </mat-form-field>
+
+    <button mat-raised-button
+            [matTooltip]="message.value"
+            aria-label="Button that displays a tooltip with a custom message">
+      Action
+    </button>
+  </div>
+</div>
+<div class="example-container">
+  <h4>Tooltip with a show and hide delay</h4>
+  <div>
+    <button mat-raised-button
+        matTooltip="By default, I delay"
+        aria-label="Button that displays a tooltip that has custom delays through a default config">
+      Button with delay-default tooltip
+    </button>
+  </div>
+</div>
+<div class="example-container-0">
+  <h4>Tooltip that demonstrates auto-hiding when it clips out of its scrolling container</h4>
+  <div>
+    <mat-form-field>
+      <mat-select placeholder="Tooltip position" [formControl]="position">
+        <mat-option *ngFor="let positionOption of positionOptions" [value]="positionOption">
+          {{positionOption}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="example-container" cdk-scrollable>
+      <button
+          mat-raised-button
+          #tooltip="matTooltip"
+          matTooltip="Info about the action"
+          [matTooltipPosition]="position.value"
+          matTooltipHideDelay="100000"
+          aria-label="Button that displays a tooltip that hides when scrolled out of the container"
+          class="example-button">
+        Action
+      </button>
+    </div>
+  </div>
+</div>
