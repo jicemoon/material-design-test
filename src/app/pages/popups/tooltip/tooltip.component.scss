@@ -1,18 +1,24 @@
-.example-button {
-  margin-top: 16px;
-}
-
-.example-tooltip-red {
-  background: #b71c1c;
-}
-
-.example-container-0 {
-  height: 200px;
-  overflow: auto;
-  border: 1px solid #ccc;
+.example-container {
+  &.ec7 {
+    .example-user-input {
+      margin-right: 8px;
+    }
+  }
+  &.ec9 {
+    height: 200px;
+    overflow: auto;
+    border: 1px solid #ccc;
+    .example-button {
+      display: block;
+      width: 48px;
+      margin: 80px auto 400px;
+    }
+  }
   .example-button {
-    display: block;
-    width: 48px;
-    margin: 80px auto 400px;
+    margin: 16px;
+  }
+
+  .example-tooltip-red {
+    background: #b71c1c;
   }
 }

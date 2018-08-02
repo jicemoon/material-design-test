@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { NavigationComponent } from './navigation.component';
 import { MenuComponent } from './menu/menu.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 const routes: Routes = [
   {
@@ -29,6 +30,13 @@ const routes: Routes = [
         component: SidenavComponent,
         data: {
           breadcrumb: 'Sidenav'
+        },
+      },
+      {
+        path: 'toolbar',
+        component: ToolbarComponent,
+        data: {
+          breadcrumb: 'Toolbar'
         },
       }
     ]

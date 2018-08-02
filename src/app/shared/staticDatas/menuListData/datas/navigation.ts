@@ -13,5 +13,9 @@ export const navigation: MenuItem = {
       label: 'Sidenav',
       link: '/navigation/sidenav'
     },
+    {
+      label: 'Toolbar',
+      link: '/navigation/toolbar'
+    },
   ]
 };
