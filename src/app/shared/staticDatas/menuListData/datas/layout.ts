@@ -9,6 +9,10 @@ export const layout: MenuItem = {
     {
       label: 'Card',
       link: '/layout/card'
-    }
+    },
+    {
+      label: 'Expansion Panel',
+      link: '/layout/expansionPanel'
+    },
   ]
 };
