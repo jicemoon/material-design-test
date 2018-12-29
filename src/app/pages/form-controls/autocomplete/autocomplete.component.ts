@@ -32,7 +32,7 @@ export class AutocompleteComponent implements OnInit {
       );
   }
   ngOnInit() {
-    this.stateGroupOptions = this.stateForm.get('stateGroup')!.valueChanges
+    this.stateGroupOptions = this.stateForm.get('stateGroup').valueChanges
       .pipe(
         startWith(''),
         map(val => this.filterGroup(val))
