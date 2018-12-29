@@ -13,7 +13,7 @@ export class AppComponent {
   opened = false;
 
   navClickHandle(evt: MouseEvent) {
-    const nodeName = (evt.target as HTMLElement).nodeName.toLowerCase();
+    const nodeName = (<HTMLElement>evt.target).nodeName.toLowerCase();
     if (nodeName === 'span' || nodeName === 'a') {
       this.opened = false;
     }
